@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'dreamhome';
-  src:  url('../fonts/dreamhome.eot?f9butc');
-  src:  url('../fonts/dreamhome.eot?f9butc#iefix') format('embedded-opentype'),
-    url('../fonts/dreamhome.ttf?f9butc') format('truetype'),
-    url('../fonts/dreamhome.woff?f9butc') format('woff'),
-    url('../fonts/dreamhome.svg?f9butc#dreamhome') format('svg');
+  src:  url('../../fonts/dreamhome.eot?f9butc');
+  src:  url('../../fonts/dreamhome.eot?f9butc#iefix') format('embedded-opentype'),
+    url('../../fonts/dreamhome.ttf?f9butc') format('truetype'),
+    url('../../fonts/dreamhome.woff?f9butc') format('woff'),
+    url('../../fonts/dreamhome.svg?f9butc#dreamhome') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

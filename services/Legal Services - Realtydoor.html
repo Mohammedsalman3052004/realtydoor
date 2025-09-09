@@ -283,6 +283,347 @@ var compare_variables = {"ajax_url":"https:\/\/realtydoor.com\/wp-admin\/admin-a
 <link rel="icon" href="https://realtydoor.com/wp-content/uploads/2024/05/cropped-0-192x192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="https://realtydoor.com/wp-content/uploads/2024/05/cropped-0-180x180.png">
 <meta name="msapplication-TileImage" content="https://realtydoor.com/wp-content/uploads/2024/05/cropped-0-270x270.png">
+		
+		 <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section 1: Why Choose Realtydoor Property Management */
+        .why-choose {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ff6b35;
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #ff6b35;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(255, 107, 53, 0.15);
+            border-left-width: 6px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .feature-card h3::before {
+            content: "✓";
+            background: #ff6b35;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Section 2: Our Process */
+        .process {
+            padding: 40px 0;
+        }
+
+        .process-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 35px 25px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            width: 220px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .process-step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255, 107, 53, 0.12);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #ff6b35, #e55529);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .process-step h3 {
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+            color: #333;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .process-step p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Section 3: Why Realtydoor */
+        .why-realtydoor {
+            padding: 40px 0;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-realtydoor::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,107,53,0.1)"/><circle cx="80" cy="40" r="3" fill="rgba(255,107,53,0.08)"/><circle cx="40" cy="70" r="2" fill="rgba(255,107,53,0.12)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .why-realtydoor .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .why-realtydoor h2 {
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .experience-highlight {
+            background: linear-gradient(135deg, #ff6b35, #e55529);
+            padding: 50px 40px;
+            border-radius: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+
+        .experience-highlight h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .experience-highlight p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            font-style: italic;
+            color: #ff6b35;
+            font-weight: 500;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .process-container {
+                justify-content: center;
+            }
+            
+            .process-step {
+                width: 200px;
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .feature-card {
+                padding: 30px;
+            }
+            
+            .process-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .process-step {
+                width: 100%;
+                max-width: 300px;
+                margin: 15px 0;
+            }
+            
+            .why-realtydoor h2 {
+                font-size: 2.2rem;
+            }
+            
+            .experience-highlight {
+                padding: 40px 30px;
+                margin: 30px 20px;
+            }
+            
+            .experience-highlight h3 {
+                font-size: 1.8rem;
+            }
+            
+            .tagline {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .section-title {
+                font-size: 1.9rem;
+            }
+            
+            .feature-card {
+                padding: 25px;
+            }
+            
+            .feature-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .process-step {
+                padding: 30px 20px;
+                min-height: 180px;
+            }
+            
+            .experience-highlight {
+                padding: 35px 25px;
+            }
+        }
+    </style>
+		
+		
 		<style type="text/css" id="wp-custom-css">
 			.green-png {filter: brightness(0) saturate(100%) invert(20%) sepia(83%) saturate(2474%) hue-rotate(144deg) brightness(93%) contrast(102%);}.featured-project {margin:10px; !important}.myslider2 .nextend-shadow-image{display:none !important}
 .blue-png {filter: brightness(0) saturate(100%) invert(19%) sepia(78%) saturate(1710%) hue-rotate(217deg) brightness(83%) contrast(93%);}
@@ -369,21 +710,21 @@ var compare_variables = {"ajax_url":"https:\/\/realtydoor.com\/wp-admin\/admin-a
             <div class="bottom-canvas-nav" bis_skin_checked="1">
                     
                 <nav id="mainnav_canvas" class="mainnav_canvas" role="navigation">
-                    <ul id="menu-main-menu-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-736"><a href="https://realtydoor.com/">Home</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7302"><a href="https://realtydoor.com/projects/">Property For Sale</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-7299"><a href="https://realtydoor.com/services/">Services</a>
+                    <ul id="menu-main-menu-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-736"><a href="../index.html">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7302"><a href="../propety for sale.html">Property For Sale</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-7299"><a href="">Services</a>
 <ul class="sub-menu">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7608"><a href="https://realtydoor.com/buy-sell">Buy &amp; Sell</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7607"><a href="https://realtydoor.com/construction-services/">Construction Services</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-7609"><a href="https://realtydoor.com/legal-services" aria-current="page">Legal services</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7610"><a href="https://realtydoor.com/financial-services/">Financial Services</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7841"><a href="https://realtydoor.com/property-management-services/">Property Management Services</a></li>
+	<li id="menu-item-7608" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7608"><a href="./buysales.html">Buy &amp; Sell</a></li>
+	<li id="menu-item-7607" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-7607"><a href="./Construction Services - Realtydoor.html" aria-current="page">Construction Services</a></li>
+	<li id="menu-item-7609" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7609"><a href="./Legal Services - Realtydoor.html">Legal services</a></li>
+	<li id="menu-item-7610" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7610"><a href="./Financial Services - Realtydoor.html">Financial Services</a></li>
+	<li id="menu-item-7841" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7841"><a href="./Property Management Services - Realtydoor.html">Property Management Services</a></li>
 </ul>
 </li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7300"><a href="https://realtydoor.com/about-us/">About Us</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6772"><a href="https://realtydoor.com/legal-services/#">Blog</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7301"><a href="https://realtydoor.com/contact-us/">Contact Us</a></li>
-</ul>                </nav><!-- #mainnav_canvas -->
+<li id="menu-item-7300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7300"><a href="../About Us - Realtydoor.html">About Us</a></li>
+<li id="menu-item-6772" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6772"><a href="../blogs.html">Blog</a></li>
+<li id="menu-item-7301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7301"><a href="../Contact Us - Realtydoor.html">Contact Us</a></li>
+</ul>              </nav><!-- #mainnav_canvas -->
                 <div class="wrap-btn-mobile" bis_skin_checked="1">
                     <a href="https://realtydoor.com/contact-us/" class="tf-btn display-pop-login"><i class=" icon-dreamhome-arrow-right2"></i> Schedule A Site Visit<span></span></a> 
                 </div>
@@ -456,7 +797,7 @@ var compare_variables = {"ajax_url":"https:\/\/realtydoor.com\/wp-admin\/admin-a
 					<div id="tf-title-section-8afa4a3" class="tf-title-section tf-split-text style1" data-tabid="8afa4a3" bis_skin_checked="1"> 
 				
 				<div class="title-section" bis_skin_checked="1">
-					<h2 class="heading">Expert Legal Solutions for <strong> Your Every Need </strong></h2>
+					<h2 class="heading">Legal Services by<strong> Realtydoor</strong></h2>
 					<div class="divider-line" bis_skin_checked="1"></div>
 					<div class="description" bis_skin_checked="1"> </div>
 				</div>                
@@ -487,11 +828,11 @@ var compare_variables = {"ajax_url":"https:\/\/realtydoor.com\/wp-admin\/admin-a
 		<div class="elementor-element elementor-element-2749a88 e-con-full e-flex e-con e-child" data-id="2749a88" data-element_type="container" bis_skin_checked="1">
 				<div class="elementor-element elementor-element-2b9f640 elementor-widget elementor-widget-text-editor" data-id="2b9f640" data-element_type="widget" data-widget_type="text-editor.default" bis_skin_checked="1">
 				<div class="elementor-widget-container" bis_skin_checked="1">
-									<h3> Delivering Exceptional Legal services  </h3>								</div>
+									<h3> Secure Your Property with Confidence</h3>								</div>
 				</div>
 				<div class="elementor-element elementor-element-81f9611 elementor-widget elementor-widget-text-editor" data-id="81f9611" data-element_type="widget" data-widget_type="text-editor.default" bis_skin_checked="1">
 				<div class="elementor-widget-container" bis_skin_checked="1">
-									<p>Embarking on the journey to turn your property dreams into reality? Look no further. Whether you’re buying or selling, our knowledgeable team will be by your side every step of the way.<br><br>From navigating the contract to comprehensively going through the documents, we guarantee that you will have a clear understanding of every aspect before making any commitments. <br><br>Trust our seasoned property team to assist you from the initial offer to the exchange and settlement stages, providing you with unmatched support throughout the entire process.</p>								</div>
+									<br>At Realtydoor, we understand that buying or selling property involves more than just transactions — it requires legal clarity and compliance. Our Legal Services ensure that every deal is secure, transparent, and hassle-free. <br/><br/> Whether you’re purchasing your first home, investing in commercial property, or selling an asset, we provide expert guidance at every step, protecting your interests and giving you peace of mind.</p>								</div>
 				</div>
 				</div>
 				</div>
@@ -502,6 +843,81 @@ var compare_variables = {"ajax_url":"https:\/\/realtydoor.com\/wp-admin\/admin-a
 		</div>
 					</div>
 		</section>
+
+
+
+		<section class="why-choose">
+    <div class="container">
+        <h2 class="section-title">Why Choose Realtydoor Legal Services?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Title Verification & Due Diligence</h3>
+                <p>Ensuring the property has a clear title and is free from disputes.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Document Preparation & Review</h3>
+                <p>Comprehensive review of agreements, sale deeds, and contracts.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Regulatory Compliance</h3>
+                <p>Assistance with approvals, registrations, and legal formalities.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Risk Mitigation</h3>
+                <p>Identifying and resolving potential legal issues before closing.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Trusted Advisors</h3>
+                <p>Experienced legal professionals dedicated to protecting your investment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Our Process -->
+<section class="process">
+    <div class="container">
+        <h2 class="section-title">Our Process</h2>
+        <div class="process-container">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Initial Consultation</h3>
+                <p>Understand your property and legal requirements.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Document Assessment</h3>
+                <p>Detailed verification of property papers and agreements.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Legal Support</h3>
+                <p>Guidance on registrations, approvals, and compliance.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Handover & Completion</h3>
+                <p>Secure closure of the transaction with all legal formalities completed.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Why Realtydoor -->
+<section class="why-realtydoor">
+    <div class="container">
+        <h2>Why Realtydoor?</h2>
+        <div class="experience-highlight">
+            <h3>20+ Years of Experience</h3>
+            <p>With 20+ years of experience in real estate and property advisory, Realtydoor ensures your transactions are safe, compliant, and smooth, making property buying and selling a stress-free experience.</p>
+        </div>
+        <div class="tagline">
+            ✨ Protect your investment and buy or sell with confidence with Realtydoor Legal Services.
+        </div>
+    </div>
+</section>
+
+
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-c3d78ab elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="c3d78ab" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}" style="width: 1732px; left: -309.901px;">
 							<div class="elementor-background-overlay" bis_skin_checked="1"></div>
 							<div class="elementor-container elementor-column-gap-no" bis_skin_checked="1">
