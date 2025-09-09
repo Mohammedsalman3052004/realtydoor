@@ -294,7 +294,240 @@ var compare_variables = {"ajax_url":"https:\/\/realtydoor.com\/wp-admin\/admin-a
 			.green-png {filter: brightness(0) saturate(100%) invert(20%) sepia(83%) saturate(2474%) hue-rotate(144deg) brightness(93%) contrast(102%);}.featured-project {margin:10px; !important}.myslider2 .nextend-shadow-image{display:none !important}
 .blue-png {filter: brightness(0) saturate(100%) invert(19%) sepia(78%) saturate(1710%) hue-rotate(217deg) brightness(83%) contrast(93%);}
 .dark-yello{filter: brightness(0) saturate(100%) invert(81%) sepia(39%) saturate(498%) hue-rotate(341deg) brightness(96%) contrast(91%);}		</style>
-		</head>
+		
+
+
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #ff6b35;
+            border-radius: 2px;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .blog-card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+        }
+
+        .blog-date {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 107, 53, 0.95);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+        }
+
+        .blog-content {
+            padding: 25px;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .blog-description {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more-btn {
+            background: linear-gradient(135deg, #ff6b35 0%, #e55529 100%);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+
+        .read-more-btn:hover {
+            background: linear-gradient(135deg, #e55529 0%, #d63918 100%);
+            transform: translateX(3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .blog-section {
+                padding: 60px 0;
+            }
+
+            .blog-card-image {
+                height: 160px;
+            }
+
+            .blog-content {
+                padding: 20px;
+            }
+
+            .blog-title {
+                font-size: 1.1rem;
+            }
+
+            .blog-description {
+                font-size: 0.85rem;
+                -webkit-line-clamp: 2;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .section-title {
+                font-size: 1.9rem;
+            }
+
+            .blog-grid {
+                gap: 20px;
+            }
+
+            .blog-card-image {
+                height: 140px;
+            }
+
+            .blog-content {
+                padding: 18px;
+            }
+
+            .blog-title {
+                font-size: 1rem;
+            }
+
+            .blog-meta {
+                gap: 10px;
+                font-size: 0.75rem;
+            }
+
+            .read-more-btn {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+
+</head>
 
 <body class="home wp-singular page-template-default page page-id-2060 wp-theme-realtydoor eio-default wide header_sticky class-name-page-home-01 elementor-default elementor-kit-6 elementor-page elementor-page-2060 e--ua-blink e--ua-chrome e--ua-webkit" __processed_93f12e04-8cd6-46eb-ae03-5a41416ea212__="true" style="overflow-x: hidden;" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJUSUtUT0siOiJkaXNhYmxlZCIsIkxJTktFRElOIjoiZGlzYWJsZWQiLCJDT05GSUciOiJkaXNhYmxlZCJ9LCJ2ZXJzaW9uIjoiMi4wLjI2Iiwic2NvcmUiOjIwMDI2fV0=" data-elementor-device-mode="desktop" cz-shortcut-listen="true">
         
@@ -1601,6 +1834,85 @@ Buying a home is a big milestone. We provide trusted financial guidance to help 
         </div><!-- #content -->
     </div><!-- #main-content -->
 
+
+	<section class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Latest Insights</h2>
+            <div class="blog-grid">
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="blog-date">Sept 5, 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Top 5 Property Investment Strategies for 2025</h3>
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <span>📖</span>
+                                <span>5 min read</span>
+                            </div>
+                            <div class="meta-item">
+                                <span>👤</span>
+                                <span>Sarah Johnson</span>
+                            </div>
+                        </div>
+                        <p class="blog-description">
+                            Discover the most effective property investment strategies that are shaping the real estate market in 2025. From emerging neighborhoods to innovative financing options.
+                        </p>
+                        <a href="./blog/blog1.html" class="read-more-btn">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="blog-date">Sept 3, 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Smart Home Technology: Boosting Property Values</h3>
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <span>📖</span>
+                                <span>7 min read</span>
+                            </div>
+                            <div class="meta-item">
+                                <span>👤</span>
+                                <span>Michael Chen</span>
+                            </div>
+                        </div>
+                        <p class="blog-description">
+                            Explore how smart home technologies are revolutionizing property values and tenant satisfaction. From automated security systems to energy-efficient IoT devices.
+                        </p>
+                        <a href="./blog/blog2.html" class="read-more-btn">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-card-image" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="blog-date">Aug 30, 2025</div>
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">Sustainable Property Management: Going Green for Profit</h3>
+                        <div class="blog-meta">
+                            <div class="meta-item">
+                                <span>📖</span>
+                                <span>6 min read</span>
+                            </div>
+                            <div class="meta-item">
+                                <span>👤</span>
+                                <span>Emma Rodriguez</span>
+                            </div>
+                        </div>
+                        <p class="blog-description">
+                            Discover how implementing sustainable practices in property management can reduce costs, attract environmentally conscious tenants, and increase long-term property value.
+                        </p>
+                        <a href="./blog/blog3.html" class="read-more-btn">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
     
     <!-- Start Footer -->   
     <div class="footer_background " bis_skin_checked="1">
