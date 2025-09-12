@@ -24,10 +24,11 @@
  
 
 .tf-title-section .title-section .description {
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 18px;
     margin-top: 15px;
+    width: 100%;
 }
 
 .tf-title-section.style2 .title-section {
