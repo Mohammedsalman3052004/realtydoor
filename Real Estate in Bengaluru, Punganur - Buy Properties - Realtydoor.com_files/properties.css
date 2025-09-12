@@ -118,7 +118,7 @@
 }
 
 .tf-properties-wrap.style1 .wrap-properties-post .item .properties-post .featured-property img {
-    width: 100%;
+    width: 90vw;
     height: auto;
     transform: scale(1);
     vertical-align: middle;
